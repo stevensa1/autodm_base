@@ -10,7 +10,7 @@ from async_upload import VideoTweet
 class Twitter:
     def __init__(self):
         print("initializing twitter....")
-        self.inits = tweepy.OAuthHandler(constants.CONSUMER_KEY, constants.CONSUMER_SCRET)
+        self.inits = tweepy.OAuthHandler(constants.CONSUMER_KEY, constants.CONSUMER_SECRET)
         self.inits.set_access_token(constants.ACCESS_KEY, constants.ACCESS_SECRET)
         self.api = tweepy.API(self.inits)
 
