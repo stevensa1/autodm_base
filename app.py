@@ -17,7 +17,7 @@ def start():
                 id = dms[i]['id']
 
                 if len(message) is not 0 and len(message) < 280:
-                    if "sdf!" or "Sdf!" or "ges!" in message:
+                    if "sdf!" in message:
                         if len(message) is not 0:
                             if dms[i]['media'] is None:
                                 print("DM will be posted")
