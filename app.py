@@ -17,7 +17,7 @@ def start():
                 id = dms[i]['id']
 
                 if len(message) is not 0 and len(message) < 280:
-                    if "sdf!" in message:
+                    if "sdf!" or "Sdf!" or "ges!" in message:
                         if len(message) is not 0:
                             if dms[i]['media'] is None:
                                 print("DM will be posted")
@@ -28,6 +28,7 @@ def start():
                                 print(dms[i]['shorted_media_url'])
                                 tw.post_tweet_with_media(message, dms[i]['media'],dms[i]['shorted_media_url'], dms[i]['type'])
                                 tw.delete_dm(id)
+                     
                         else:
                             print("DM deleted because its empty..")
                             tw.delete_dm(id)
